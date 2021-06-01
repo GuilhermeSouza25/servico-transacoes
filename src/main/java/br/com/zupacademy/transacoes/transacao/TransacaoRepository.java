@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TransacaoRepository extends JpaRepository<Transacao, String> {
 
-    Page<Transacao> findByCartaoId(String id, Pageable pageable);
+    Page<Transacao> findByCartaoIdAndCartaoEmail(String id, String email, Pageable pageable);
 }
